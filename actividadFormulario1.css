@@ -10,26 +10,132 @@ textarea {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     font-family: Arial, sans-serif;
-    margin: 20px;
 }
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.menu.visible {
+    transform: translateX(0);
+}
+
+.menu-toggle {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: fixed; /* Change to fixed to avoid overlapping */
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.menu-toggle:hover {
+    background-color: #575757;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #575757;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    margin-left: 0; /* Adjust for menu */
+    transition: margin-left 0.3s ease;
+}
+
+.menu.visible ~ main {
+    margin-left: 200px;
+}
+
 h1 {
     color: #333;
 }
+
 label {
     display: block;
     margin-top: 10px;
     font-weight: bold;
 }
+
 button {
-    padding: 10px 20px;
-    background-color: #28a745;
+    width: 100%; /* Make the button span the full width */
+    padding: 15px;
+    font-size: 16px;
+    background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #0056b3;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+form {
+    padding: 40px; /* Increased padding for better spacing */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px; /* Increased from 600px to 800px */
+}
+
+input {
+    width: 100%; /* Ensure inputs take full width */
+    padding: 10px;
+    box-sizing: border-box;
 }
 
