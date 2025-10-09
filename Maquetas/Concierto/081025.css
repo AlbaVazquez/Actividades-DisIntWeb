@@ -3,32 +3,34 @@
 header {
     background-color: rgb(203, 206, 209);
     padding: 20px;
-    text-align: center;
     border-bottom: 1px solid #000000;
 }
 
 header h1 {
     text-align: left;
-    margin-left: 170px;
+    display: inline;
+    
 }
 
 header nav {
-    text-align: right;
-    margin-right: 170px;
+    float: right;
+    
+     width: 30%;
 }
 
-.menu {
+header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    
 }
 
-.menu li {
+header nav ul  li {
     display: inline;
     margin-left: 20px;
 }
 
-.menu a {
+header nav ul li a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
@@ -43,7 +45,17 @@ body {
 }
 
 main {
-    margin-top: 40px;;
+    margin-top: 40px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.texto {
+    margin: 50px;
     text-align: center;
 }
 
@@ -57,6 +69,7 @@ main {
     background-color: rgb(203, 206, 209);
     border-bottom: 1px solid #000000;
     border-top: 1px solid #000000;
+    text-align: center;
 }
 
 .secciones-evento {
@@ -64,36 +77,28 @@ main {
 }
 
 .secciones-evento h2 {
-    text-align: center;
     margin-top: 0;
     padding-top: 20px;
 }
 
-.secciones-evento p {
-    margin-right: 130px;
-}
 
 #informacion-evento {
+    font-size: 1rem;
     width: 47%;
-    padding: 10px;
-    vertical-align: top;
-    font-size: 1rem; 
 }
 
 #comprar-entradas {
     width: 47%;
-    padding: 10px;
     vertical-align: top;
     font-size: 1rem;
     border-left: 2px solid #000000;
-    text-align: center;
-    padding-top: 60px;
+    padding-top: 35px;
 }
 
 #comprar-entradas button {
     background-color: rgb(203, 206, 209);
     border: 1px solid rgb(0, 0, 0);
-    padding: 20px 30px;
+    padding: 20px 10px;
     cursor: pointer;
     border-radius: 30px;
     font-size: 1.2rem;
@@ -104,4 +109,22 @@ main {
 
 footer {
     font-family: AwesomeFont;
+    background-color: rgb(203, 206, 209);
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    display: inline;
+    padding: 20px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #000;
 }
