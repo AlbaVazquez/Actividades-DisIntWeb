@@ -1,59 +1,121 @@
+
 body {
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
 }
 
+/* Contenedor general */
+body > div {
+  display: grid;
+}
+
+/* Colores para distinguir secciones */
 header {
-    border: 1px black solid;
-    color: white;
-    background-color: rgb(1, 18, 32);
-    padding: 20px;
+  background: #0d1b2a;
+  color: white;
+  padding: 1em;
+  text-align: center;
 }
 
 nav {
-    border: 1px black solid;
-    color: white;
-    background-color: rgb(199, 57, 57);
-    padding: 20px;
-}
-
-section {
-    border: 1px black solid;
-}
-
-main {
-    border: 1px black solid;
-    color: white;
-    background-color: rgb(10, 33, 51);
-    padding: 40px;
-}
-
-aside {
-    border: 1px solid;
-    background-color: rgb(236, 206, 122);
-    padding: 25px;
+  background: #e63946;
+  color: white;
+  padding: 1em;
+  text-align: center;
 }
 
 .hero {
-    color: white;
-    background-color: rgb(38, 126, 197);
-    padding: 40px;
+  background: #457b9d;
+  color: white;
+  padding: 2em;
+  text-align: center;
+}
+
+main {
+  background: #1d3557;
+  color: white;
+  padding: 2em;
+  text-align: center;
+}
+
+aside {
+  background: #f1c40f;
+  padding: 1.5em;
+  text-align: center;
 }
 
 .extra {
-    background-color: rgb(57, 170, 114);
-    padding: 25px;
+  background: #2a9d8f;
+  color: white;
+  padding: 1.5em;
+  text-align: center;
 }
 
 .image {
-    background-color: rgb(148, 216, 184);
-    padding: 25px;
+  background: #a8dadc;
+  padding: 1.5em;
+  text-align: center;
 }
 
-div {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
-    ;
+/* ============ MÓVIL ============ */
+@media (max-width: 600px) {
+  div {
+    grid-template-areas:
+      "header"
+      "nav"
+      "hero"
+      "main"
+      "aside"
+      "extra"
+      "image";
+  }
+
+  header { grid-area: header; }
+  nav { grid-area: nav; }
+  .hero { grid-area: hero; }
+  main { grid-area: main; }
+  aside { grid-area: aside; }
+  .extra { grid-area: extra; }
+  .image { grid-area: image; }
+}
+
+/* ============ TABLET ============ */
+@media (min-width: 601px) and (max-width: 1024px) {
+  div {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "header header"
+      "nav hero"
+      "nav main"
+      "aside aside"
+      "extra image";
+  }
+
+  header { grid-area: header; }
+  nav { grid-area: nav; }
+  .hero { grid-area: hero; }
+  main { grid-area: main; }
+  aside { grid-area: aside; }
+  .extra { grid-area: extra; }
+  .image { grid-area: image; }
+}
+
+/* ============ ESCRITORIO ============ */
+@media (min-width: 1025px) {
+ div {
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-areas:
+      "header nav nav"
+      "hero hero hero"
+      "main main image"
+      "aside aside extra";
+  }
+
+  header { grid-area: header; }
+  nav { grid-area: nav; }
+  .hero { grid-area: hero; }
+  main { grid-area: main; }
+  aside { grid-area: aside; }
+  .extra { grid-area: extra; }
+  .image { grid-area: image; }
 }
