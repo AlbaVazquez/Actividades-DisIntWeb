@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Colores para distinguir secciones */
+header {
+  background: #0d1b2a;
+  color: white;
+  padding: 2em;
+  text-align: center;
+}
+
+nav {
+  background: #e63946;
+  color: white;
+  padding: 2em;
+  text-align: center;
+}
+
+.hero {
+  background: #457b9d;
+  color: white;
+  padding: 2em;
+  text-align: center;
+}
+
+main {
+  background: #1d3557;
+  color: white;
+  padding: 2em;
+  text-align: center;
+}
+
+aside {
+  background: #f1c40f;
+  padding: 2em;
+  text-align: center;
+}
+
+.extra {
+  background: #2a9d8f;
+  color: white;
+  padding: 2em;
+  text-align: center;
+}
+
+.image {
+  background: #a8dadc;
+  padding: 2em;
+  text-align: center;
+}
+
+/* ============ MÓVIL ============ */
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+}
+
+/* ============ TABLET ============ */
+@media (min-width: 810px) and (max-width: 1080px) {
+    body{
+        flex-direction: row;
+    }
+
+   header {
+    order: 0;
+    flex: 0 0 100%;
+  }
+
+  section {
+    order: 1;
+    flex: 0 0 100%;
+  }
+
+  nav {
+    order: 2;
+    flex: 0 0 10%;
+  }
+
+  div {
+    order: 3;
+    flex: 0 0 80%;
+  }
+
+  }
+  main {
+    order: 0;
+    flex: 0 0 70%;
+  }
+
+  aside {
+    order: 1;
+    flex: 0 0 100%;
+  }
+
+    .extra {
+        order: 2;
+        width: 50%;
+    }
+
+    .image {
+        order: 3;
+        width: 30%;
+    }
