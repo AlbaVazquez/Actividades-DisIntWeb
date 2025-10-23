@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
@@ -9,47 +13,40 @@ body {
 header {
   background: #0d1b2a;
   color: white;
-  padding: 2em;
   text-align: center;
 }
 
 nav {
   background: #e63946;
   color: white;
-  padding: 2em;
   text-align: center;
 }
 
 .hero {
   background: #457b9d;
   color: white;
-  padding: 2em;
   text-align: center;
 }
 
 main {
   background: #1d3557;
   color: white;
-  padding: 2em;
   text-align: center;
 }
 
 aside {
   background: #f1c40f;
-  padding: 2em;
   text-align: center;
 }
 
 .extra {
   background: #2a9d8f;
   color: white;
-  padding: 2em;
   text-align: center;
 }
 
 .image {
   background: #a8dadc;
-  padding: 2em;
   text-align: center;
 }
 
@@ -61,35 +58,41 @@ aside {
 }
 
 /* ============ TABLET ============ */
-@media (min-width: 810px) and (max-width: 1080px) {
+@media (min-width: 810px) and (max-width: 1439px) {
     body{
         flex-direction: row;
+        text-align: center;
     }
 
    header {
     order: 0;
     flex: 0 0 100%;
+    padding: 1em;
   }
 
-  section {
+  .hero {
     order: 1;
     flex: 0 0 100%;
+    padding: 4em;
   }
 
   nav {
     order: 2;
-    flex: 0 0 10%;
+    flex: 0 0 14%;
   }
 
   div {
     order: 3;
-    flex: 0 0 80%;
+    flex: 0 0 86%;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   }
   main {
     order: 0;
-    flex: 0 0 70%;
+    flex: 0 0 100%;
+    padding: 4em;
   }
 
   aside {
@@ -99,10 +102,66 @@ aside {
 
     .extra {
         order: 2;
-        width: 50%;
+        flex: 0 0 70%
     }
 
     .image {
         order: 3;
-        width: 30%;
+        flex: 0 0 30%
     }
+
+/* ============ DESKTOP ============ */
+/* @media (min-width: 1440px) {
+    body{
+        flex-direction: row;
+        text-align: center;
+    }
+  }
+
+   header {
+    order: 0;
+    flex: 0 0 20%;
+    padding: 1em;
+  }
+
+  nav {
+    order: 1;
+    flex: 0 0 80%;
+    padding: 1em
+  }
+
+  .hero {
+    order: 2;
+    flex: 0 0 100%;
+    padding: 4em;
+  }
+
+div {
+    order: 3;
+    flex: 0 0 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  main {
+    order: 0;
+    flex: 0 0 50%;
+    padding: 4em;
+    margin-right: 30%;
+  }
+
+  .extra {
+    order: 1;
+    flex: 0 0 20%;
+  }
+
+  .image {
+    order: 2;
+    flex: 0 0 25%;
+  }
+
+  aside {
+    order: 3;
+    flex: 0 0 100%;
+    padding: 1em;
+  } */
