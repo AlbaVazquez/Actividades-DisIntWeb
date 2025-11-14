@@ -104,13 +104,15 @@ section {
 
     background-color: rgb(54, 54, 54);
     color: white;
+
+    border: 1px rgb(149, 27, 27) solid
 }
 
 .fila-carteles {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
-    width: 100%;
+    border: 1px rgb(149, 27, 27) solid
 }
 
 .cartel img  {
@@ -131,22 +133,21 @@ section {
 .cartel {
     text-align: center;
     position: relative;
-    overflow: hidden;
-    height: 200px;
     width: 100%;
+    height: 100%;
 }
 
 .info {
     background-color: rgb(40,40,40);
     color: white;
+    
     padding: 15px;
     margin-top: 10px;
     border-radius: 10px;
-
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-
+    
     transition: opacity 0.4s ease, max-height 0.4s ease;
 }
 
@@ -154,11 +155,14 @@ section {
     position: relative;
     height: 100%;
     width: 100%;
+    border: 1px rgb(149, 27, 27) solid;
+    display: flex;    
+    flex-direction: column;
 }
 
 .pelicula:hover .info {
+    max-height: 50vh;
     opacity: 1;
-    max-height: 450px;
 }
 
 /* ---- FOOTER ---- */
@@ -192,8 +196,9 @@ footer {
     }
 
     .cartel {
-        height: 360px;
         width: auto;
+
+        border: 1px rgb(27, 59, 149) solid
     }
 }
 
