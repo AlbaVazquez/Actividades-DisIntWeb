@@ -18,11 +18,19 @@
                 <ul>
                     <li><a href="cartelera.html">Cartelera</a></li>
                     <li><a>Contacto</a></li>
-                    <li><a href="https://maps.app.goo.gl/an7ZEiBvyJJR2widA">¿Dónde estamos?</a></li>
+                    <li><a href="#" id="donde-estamos-link">¿Dónde estamos?</a></li>
                 </ul>
             </nav>
-            <button>Comprar entradas</button>
+            <button>COMPRAR ENTRADAS</button>
         </header>
+
+        <div id="map-frame-container" class="hidden">
+            <button id="close-map-frame">CERRAR</button>
+            <iframe id="map-frame"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31247.283473103056!2d-5.959393137475026!3d37.28737816664378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1271f1d942234f%3A0xf9bcba987b66ece!2sCineapolis%20Way!5e1!3m2!1ses!2ses!4v1763211087598!5m2!1ses!2ses"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" allow="fullscreen">
+            </iframe>
+        </div>
 
         <main>
             <div class="carrusel-wrapper">
@@ -43,55 +51,55 @@
                 <button class="prev-button">❮</button>
                 <button class="next-button">❯</button>
                 <div class="botones-carrusel">
-                    <button class="boton-carrusel">Comprar entradas</button>
-                    <button class="boton-carrusel">Ver trailer</button>
+                    <button class="boton-carrusel">COMPRAR ENTRADAS</button>
+                    <button class="boton-carrusel">VER TRAILER</button>
                 </div>
             </div>
 
-            <main>
-                <section>
-                    <h1>Cartelera</h1>
+            <section>
+                <h1>Cartelera</h1>
 
-                    <div class="fila-carteles">
-                        <div class="cartel">
-                            <img src="https://cineapolis.es/Posters/diemylove.jpg" alt="imagen">
-                            <p class="titulo-pelicula">DIE MY LOVE</p>
-                        </div>
-
-                        <div class="cartel">
-                            <img src="https://cineapolis.es/Posters/demonslayercastle.jpg" alt="imagen">
-                            <p class="titulo-pelicula">GUARDIANES DE LA NOCHE: LA FORTALEZA INFINITA</p>
-                        </div>
-
-                        <div class="cartel">
-                            <img src="https://cineapolis.es/Posters/lostigres.jpg" alt="imagen">
-                            <p class="titulo-pelicula">LOS TIGRES</p>
-                        </div>
-
-                        <div class="cartel">
-                            <img src="https://cineapolis.es/Posters/lostiposmalos2.jpg" alt="imagen">
-                            <p class="titulo-pelicula">LOS TIPOS MALOS 2</p>
-                        </div>
-
-                        <div class="cartel">
-                            <img src="https://cineapolis.es/Posters/wicked2.jpg" alt="imagen">
-                            <p class="titulo-pelicula">WICKED 2</p>
-                        </div>
+                <div class="fila-carteles">
+                    <div class="cartel">
+                        <img src="https://cineapolis.es/Posters/diemylove.jpg" alt="imagen">
+                        <p class="titulo-pelicula">DIE MY LOVE</p>
                     </div>
-                </section>
-            </main>
-            <footer>
-                <div id="item-1" <p>Visita nuestras redes:</p>
-                    <i class="icon-twitter"></i>
-                    <i class="icon-instagram"></i>
-                    <i class="icon-facebook"></i>
+
+                    <div class="cartel">
+                        <img src="https://cineapolis.es/Posters/demonslayercastle.jpg" alt="imagen">
+                        <p class="titulo-pelicula">GUARDIANES DE LA NOCHE: LA FORTALEZA INFINITA</p>
+                    </div>
+
+                    <div class="cartel">
+                        <img src="https://cineapolis.es/Posters/lostigres.jpg" alt="imagen">
+                        <p class="titulo-pelicula">LOS TIGRES</p>
+                    </div>
+
+                    <div class="cartel">
+                        <img src="https://cineapolis.es/Posters/lostiposmalos2.jpg" alt="imagen">
+                        <p class="titulo-pelicula">LOS TIPOS MALOS 2</p>
+                    </div>
+
+                    <div class="cartel">
+                        <img src="https://cineapolis.es/Posters/wicked2.jpg" alt="imagen">
+                        <p class="titulo-pelicula">WICKED 2</p>
+                    </div>
                 </div>
-                <div id="item-2">
-                    <p>Información de contacto: </p>
-                    <p>tlf: +34 123 45 67 89</p>
-                    <p>email: contacto@cineapolis.com</p>
-                </div>
-            </footer>
+            </section>
+        </main>
+        <footer>
+            <div id="item-1">
+                <p>Visita nuestras redes:</p>
+                <i class="icon-twitter"></i>
+                <i class="icon-instagram"></i>
+                <i class="icon-facebook"></i>
+            </div>
+            <div id="item-2">
+                <p>Información de contacto: </p>
+                <p>tlf: +34 123 45 67 89</p>
+                <p>email: contacto@cineapolis.com</p>
+            </div>
+        </footer>
     </div>
     <script src="scripts.js"></script>
 </body>
