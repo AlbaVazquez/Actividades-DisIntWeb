@@ -188,6 +188,12 @@ section {
     max-height: 100%;
 }
 
+.cartel:hover {
+    transform: rotate(10deg);
+    transition: width 2s;
+
+}
+
 /* ---- FOOTER ---- */
 footer {
     padding: 20px;
