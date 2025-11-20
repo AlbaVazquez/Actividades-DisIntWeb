@@ -1,0 +1,154 @@
+body {
+    width: 100%;
+    font-size: 10px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+/* --- ESTILOS PARA EL HEADER --- */
+header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    z-index: 3;
+    width: 100%;
+}
+
+.headercont {
+    display: flex;
+}
+
+#logo {
+    height: 30px;
+    margin: auto;
+}
+
+header h1 {
+    margin: auto;
+}
+
+nav {
+    margin: auto;
+    margin-right: 15%;
+}
+
+nav ul {
+    display: flex;
+    gap: 8%;
+}
+nav ul li {
+    list-style: none;
+}
+
+nav ul a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* --- ESTILOS PARA EL MAIN --- */
+.container {
+    text-align: center;
+    width: 100%;
+}
+
+.hero img  {
+    width: 100%;
+    max-height: 1000px;
+}
+
+.hero p {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    top: 9%;
+    font-size: 40px;
+}
+
+.hero button {
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    border-radius: 20px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    background-color: rgb(185, 94, 8);
+    color: white;
+}
+
+/* --- fotografías --- */
+
+.fotografias {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-template-areas:
+        "item1 item2 item3"
+        "item4 item4 item5";
+    width: 100%;
+    gap: 10px;
+    }
+
+.foto {
+    width: 100%;
+}
+
+#item1 {
+    grid-area: item1;
+}
+
+#item2 {
+    grid-area: item2;
+}
+
+#item3 {
+    grid-area: item3;
+}
+
+#item4 {
+    grid-area: item4;
+}
+
+#item5 {
+    grid-area: item5;
+}
+
+/* --- ESTILOS PARA EL FOOTER --- */
+footer {
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 2%;
+}
+
+.about {
+    margin-left: 10%;
+}
+
+.sevilla-info {
+    text-align: right;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.malaga-info {
+    margin-right: 10%;
+}
+
+@media screen and (min-width: 640px) {
+    .sevilla-info {
+        margin-right: 10%;
+    }
+
+    body {
+        font-size: 30px;
+    }
+
+    #logo {
+        height: 70px;
+    }
+}
