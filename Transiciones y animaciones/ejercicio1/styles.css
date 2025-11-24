@@ -1,0 +1,81 @@
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    gap: 15px;
+    width: 600px;
+    margin: 50px auto;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.card-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    filter: grayscale(100%);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.card-1 {
+    background-image: url('https://images.ctfassets.net/hrltx12pl8hq/5nr1y0YZUxx1mwxUjtkfQS/05cb1b2a172d952652e7522cf9e12255/Colorful-Minimalism-Thumbnail.jpg');
+}
+
+.card-2 {
+    background-image: url('https://images.ctfassets.net/hrltx12pl8hq/4KdFPXMN7reP9i1jdtQydQ/4a9bd225c8d7eb4088f6a3fbb032ca74/Christmas-Cheer-Thumbnail-1.jpg');
+}
+
+.card-3 {
+    background-image: url('https://images.ctfassets.net/hrltx12pl8hq/4TwJhzLhKUTzGLAjpgIaZu/6f42df378c91f7f27709bd8dfff4fdde/Winter-Wildlife-Thumb.jpg');
+}
+
+.card-4 {
+    background-image: url('https://images.ctfassets.net/hrltx12pl8hq/WxzfV7RtLK5KmRazK4nsW/04c39a9b733588585063d28ca3a78e54/Indoor-Decorations-Thumb.jpg');
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    z-index: 2;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.card-title {
+    font-size: 1.2em;
+}
+
+.card-subtitle {
+    font-size: 0.9em;
+    margin-top: 5px;
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.4s ease, height 0.4s ease;
+}
+
+.card:hover .card-image {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.card:hover .card-content {
+    transform: translateY(0);
+}
+
+.card:hover .card-subtitle {
+    opacity: 1;
+    height: auto;
+}
